@@ -11,6 +11,7 @@ import { HeaderComponent } from './componets/header/header.component';
 import { RegEmpComponent } from './reg-emp/reg-emp.component';
 import { VacanteFormComponent } from './vacante-form/vacante-form.component';
 import { ModelsComponent } from './models/models.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ModelsComponent } from './models/models.component';
     RegEmpComponent,
     FormVacanteComponent,
     VacanteFormComponent,
-    ModelsComponent
+    ModelsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
