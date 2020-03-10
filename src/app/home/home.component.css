@@ -1,0 +1,56 @@
+.imagenPrincipal {
+    position: relative;
+    top: -32px;
+    height: 600px;
+    width: 100%;
+    max-width: 1680px;
+    height: 100%;
+    min-width: 500px;
+}
+
+.imagenOport {
+    position: relative;
+    opacity: 0.5;
+    top: -16px;
+    height: 200px;
+    width: 100%;
+    max-width: 1680px;
+    min-width: 250px;
+}
+
+.text {
+    position: absolute;
+    max-width: max-content;
+    top: 20%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    color: black;
+    width: 30%;
+    top: 32px;
+    right: 35%;
+    font-size: 5.2vw;
+}
+
+.bolsa {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    height: 80%;
+    width: 90%;
+    font-size: 7.2vw;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+#carouselExampleControls {
+    position: relative;
+}
+
+.outset {
+    position: relative;
+    border-style: outset;
+    border-color: rgb(148, 243, 54);
+    width: 140px;
+    height: 50px;
+    font-size: 30px;
+}

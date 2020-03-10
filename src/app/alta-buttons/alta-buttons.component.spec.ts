@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegEmpComponent } from './reg-emp.component';
+import { AltaButtonsComponent } from './alta-buttons.component';
 
-describe('RegEmpComponent', () => {
-  let component: RegEmpComponent;
-  let fixture: ComponentFixture<RegEmpComponent>;
+describe('AltaButtonsComponent', () => {
+  let component: AltaButtonsComponent;
+  let fixture: ComponentFixture<AltaButtonsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegEmpComponent ]
+      declarations: [ AltaButtonsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RegEmpComponent);
+    fixture = TestBed.createComponent(AltaButtonsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
