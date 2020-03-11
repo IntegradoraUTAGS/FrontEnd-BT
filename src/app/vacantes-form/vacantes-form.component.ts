@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
-import { vacantesModelo } from '../vacantes.model';
+import { vacantesModelo } from '../models/vacantes.model';
 import { NgForm } from '@angular/forms';
 import { vacantesService } from 'src/app/services/vacante.service';
 import Swal from 'sweetalert2';
