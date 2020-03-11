@@ -1,0 +1,87 @@
+<div class="container">
+    <h1>Vacantes: </h1>
+    <form (ngSubmit)="registrar(myForm)" #myForm="ngForm">
+        <label for="perfil">Perfil: </label>
+        <input 
+            type="text"
+            name="perfil"
+            class="form-control"
+            id="perfil"
+            [(ngModel)]="vacantes.perfil"
+            requiered
+        />
+
+        <label for="requiere">Requiere: </label>
+        <input 
+            type="text"
+            name="requiere"
+            class="form-control"
+            id="requiere"
+            [(ngModel)]="vacantes.requiere"
+            requiered
+        />
+
+        <label for="horario">Horario: </label>
+        <input 
+            type="TimeRanges"
+            name="horario"
+            class="form-control"
+            id="horario"
+            [(ngModel)]="vacantes.horario"
+            requiered
+        />
+
+        <label for="prestaciones">Prestaciones: </label>
+        <input 
+            type="text"
+            name="prestaciones"
+            class="form-control"
+            id="prestaciones"
+            [(ngModel)]="vacantes.prestaciones"
+            requiered
+        />
+
+        <label for="dirigidoA">Dirigido A: </label>
+        <select class="form-control" name="dirigidoA" id="dirigidoA" [(ngModel)]="vacantes.dirigidoA" requiered>
+            <option value="estadias">Estadías.</option>
+            <option value="egresados">Egresados.</option>			      
+        </select>
+
+        <label for="dirigidoPersona">Persona a quien dirigirse: </label>
+        <input 
+            type="text"
+            name="dirigidoPersona"
+            class="form-control"
+            id="dirigidoPersona"
+            [(ngModel)]="vacantes.dirigidoPersona"
+            requiered
+        />
+
+        <label for="sueldo">Sueldo: </label>
+        <input 
+            type="number"
+            name="sueldo"
+            class="form-control"
+            id="sueldo"
+            [(ngModel)]="vacantes.sueldo"
+            requiered
+        />
+
+        <label for="idioma">Idiomas: </label>
+        <input 
+            type="text"
+            name="idiomas"
+            class="form-control"
+            id="idiomas"
+            [(ngModel)]="vacantes.idioma"
+            requiered
+        />
+
+        <button type="submit" class="btn btn-success"> Enviar. </button>
+    </form>
+    <div class="pre">
+        <h2>Modelo: </h2>
+        {{currentVacantes}}
+    </div>
+</div>
+
