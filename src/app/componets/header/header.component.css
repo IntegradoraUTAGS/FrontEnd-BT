@@ -43,10 +43,10 @@
 }
 
 #botonLogin {
-    position: relative;
+    position: absolute;
     color: white;
-    top: 25px;
-    left: 50%;
+    top: 32px;
+    right: 3%;
     font-size: 1.3vw;
 }
 
