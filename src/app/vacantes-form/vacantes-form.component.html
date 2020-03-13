@@ -2,44 +2,16 @@
     <h1>Vacantes: </h1>
     <form (ngSubmit)="registrar(myForm)" #myForm="ngForm">
         <label for="perfil">Perfil: </label>
-        <input 
-            type="text"
-            name="perfil"
-            class="form-control"
-            id="perfil"
-            [(ngModel)]="vacantes.perfil"
-            requiered
-        />
+        <input type="text" name="perfil" class="form-control" id="perfil" [(ngModel)]="vacantes.perfil" requiered />
 
         <label for="requiere">Requiere: </label>
-        <input 
-            type="text"
-            name="requiere"
-            class="form-control"
-            id="requiere"
-            [(ngModel)]="vacantes.requiere"
-            requiered
-        />
+        <input type="text" name="requiere" class="form-control" id="requiere" [(ngModel)]="vacantes.requiere" requiered />
 
         <label for="horario">Horario: </label>
-        <input 
-            type="TimeRanges"
-            name="horario"
-            class="form-control"
-            id="horario"
-            [(ngModel)]="vacantes.horario"
-            requiered
-        />
+        <input type="TimeRanges" name="horario" class="form-control" id="horario" [(ngModel)]="vacantes.horario" requiered />
 
         <label for="prestaciones">Prestaciones: </label>
-        <input 
-            type="text"
-            name="prestaciones"
-            class="form-control"
-            id="prestaciones"
-            [(ngModel)]="vacantes.prestaciones"
-            requiered
-        />
+        <input type="text" name="prestaciones" class="form-control" id="prestaciones" [(ngModel)]="vacantes.prestaciones" requiered />
 
         <label for="dirigidoA">Dirigido A: </label>
         <select class="form-control" name="dirigidoA" id="dirigidoA" [(ngModel)]="vacantes.dirigidoA" requiered>
@@ -48,44 +20,16 @@
         </select>
 
         <label for="dirigidoPersona">Persona a quien dirigirse: </label>
-        <input 
-            type="text"
-            name="dirigidoPersona"
-            class="form-control"
-            id="dirigidoPersona"
-            [(ngModel)]="vacantes.dirigidoPersona"
-            requiered
-        />
+        <input type="text" name="dirigidoPersona" class="form-control" id="dirigidoPersona" [(ngModel)]="vacantes.dirigidoPersona" requiered />
 
         <label for="sueldo">Sueldo: </label>
-        <input 
-            type="number"
-            name="sueldo"
-            class="form-control"
-            id="sueldo"
-            [(ngModel)]="vacantes.sueldo"
-            requiered
-        />
+        <input type="number" name="sueldo" class="form-control" id="sueldo" [(ngModel)]="vacantes.sueldo" requiered />
 
         <label for="idioma">Idiomas: </label>
-        <input 
-            type="text"
-            name="idiomas"
-            class="form-control"
-            id="idiomas"
-            [(ngModel)]="vacantes.idioma"
-            requiered
-        />
+        <input type="text" name="idiomas" class="form-control" id="idiomas" [(ngModel)]="vacantes.idioma" requiered />
 
         <label for="fechaLimite">Fecha Límite de la Vacante: </label>
-        <input 
-            type="date"
-            name="fechaLimite"
-            class="form-control"
-            id="fechaLimite"
-            [(ngModel)]="vacantes.fechaLimite"
-            requiered
-        />
+        <input type="date" name="fechaLimite" class="form-control" id="fechaLimite" [(ngModel)]="vacantes.fechaLimite" requiered />
 
         <button type="submit" class="btn btn-success"> Enviar. </button>
     </form>
@@ -94,4 +38,3 @@
         {{currentVacantes}}
     </div>
 </div>
-

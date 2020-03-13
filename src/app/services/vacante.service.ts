@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { vacantesModelo } from '../models/vacantes.model';
+import { vacantesModelo } from '../models/vacantes.models';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,6 @@ export class vacantesService {
   constructor(private http: HttpClient) { }
 
   registrarVacantes(vacantes: vacantesModelo) {
-    return this.http.post(`${this.url}/vacante/registrar`, vacantes).toPromise();
+    return this.http.post(`${this.url}/vacantes/registrar`, vacantes).toPromise();
   }
 }
