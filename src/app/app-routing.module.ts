@@ -5,7 +5,7 @@ import {AltaButtonsComponent} from '../app/alta-buttons/alta-buttons.component';
 import { LoginComponent } from './login/login.component';
 import { VacantesFormComponent } from './vacantes-form/vacantes-form.component';
 import { REComponent } from './re/re.component';
-
+import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
 
 
 const routes: Routes = [
@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'altaButtons', component:AltaButtonsComponent},
   {path:'login', component:LoginComponent},
   {path: 'RegEmp', component:REComponent},
-  {path: 'vacantesForm', component:VacantesFormComponent}
+  {path: 'vacantesForm', component:VacantesFormComponent},
+  {path: 'usuario', component: FormularioUsuarioComponent}
 ];
 
 @NgModule({

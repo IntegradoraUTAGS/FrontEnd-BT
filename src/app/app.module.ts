@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 import { AltaButtonsComponent } from './alta-buttons/alta-buttons.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
 
 
 
@@ -25,6 +25,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     REComponent,
     AltaButtonsComponent,
     VacantesFormComponent, 
+    FormularioUsuarioComponent
 
   ],
   imports: [

@@ -28,6 +28,9 @@ export class VacantesFormComponent implements OnInit {
     return JSON.stringify(this.vacantes);
   }
   registrar(forma: NgForm) {
+
+    console.log(this.vacantes);
+    
     this.vacantesService.registrarVacantes(this.vacantes).then((vacantes: any) => {
       Toast.fire(vacantes.msg, '', 'success');
       forma.reset();
