@@ -5,13 +5,13 @@
             <div class="titulo">
                 <img id="img-login" class="sesion" src="../../assets/usuario.png">
                 <b><legend style="color:black;" style="text-align:center;">LOGIN</legend></b>
-                <form #myForm='ngForm' (ngSubmit)='registrar()' method="post" role="form" enctype="multipart/form-data">
+                <form #forma='ngForm' (ngSubmit)='registrar(forma)' method="post" role="form" enctype="multipart/form-data">
                     <p id="error" style="color:red; display: none;"></p>
                     <input [(ngModel)]="usuario.correo" name="correo" type="text" class="form-control" placeholder="Por favor inserta tu mail" required><br>
                     <input [(ngModel)]="usuario.contrasena" name="contrasena" type="password" class="form-control" placeholder="Por favor inserta tu password" required><br>
                     <button type="submit" class=" btn btn-block active btn-dark">Ingresar</button>
-                    <button routerLink="/usuario" class="col-md-4" type="submit" class="btn btn-block active btn-dark" id="botonUsuarios">
-                        Registrar</button>
+                    <p>¿No tienes una cuenta? <a class="link" href="/usuario">Registrate </a></p>
+
                 </form><br>
 
             </div>

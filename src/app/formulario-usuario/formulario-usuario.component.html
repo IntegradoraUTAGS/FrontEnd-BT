@@ -2,13 +2,13 @@
     <div class="row h-100 d-flex justify-content-center">
         <div class="col-4 mt-5">
             <b><legend style="color:black;" style="text-align:center;">Alta Usuario</legend></b>
-            <form #myForm='ngForm' (ngSubmit)='insertar()' method="post" role="form" enctype="multipart/form-data">
+            <form #form='ngForm' (ngSubmit)='insertar(form)' method="post" role="form" enctype="multipart/form-data">
                 <p id="error" style="color:red; display: none;"></p>
-                <input [(ngModel)]="usuario.nombre" name="nombre" type="text" class="form-control" placeholder="Por favor inserta tu Nombre" required><br>
-                <input [(ngModel)]="usuario.usuario" name="usuario" type="text" class="form-control" placeholder="Por favor inserta tu Usuario" required><br>
-                <input [(ngModel)]="usuario.correo" name="correo" type="text" class="form-control" placeholder="Por favor inserta tu Correo" required><br>
-                <input [(ngModel)]="usuario.role" name="rol" type="text" class="form-control" placeholder="Por favor inserta tu Rol" required><br>
-                <input [(ngModel)]="usuario.contrasena" name="contrasena" type="password" class="form-control" placeholder="Por favor inserta tu Contraseña" required><br>
+                <input [(ngModel)]="usuario.nombre" name="nombre" type="text" class="form-control" placeholder=" inserta tu Nombre" required><br>
+                <input [(ngModel)]="usuario.usuario" name="usuario" type="text" class="form-control" placeholder=" inserta tu Usuario" required><br>
+                <input [(ngModel)]="usuario.correo" name="correo" type="text" class="form-control" placeholder="inserta tu Correo" required><br>
+                <input [(ngModel)]="usuario.role" name="rol" type="text" class="form-control" placeholder=" inserta tu Rol" required><br>
+                <input [(ngModel)]="usuario.contrasena" name="contrasena" type="password" class="form-control" placeholder=" inserta tu Contraseña" required><br>
 
                 <button type="submit" class=" btn btn-block active btn-dark">Agregar</button>
             </form>

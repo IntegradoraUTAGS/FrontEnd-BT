@@ -41,3 +41,9 @@
     height: 180px;
     margin-top: 2%;
 }
+
+.link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
