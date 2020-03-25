@@ -25,16 +25,16 @@ export class FormularioUsuarioComponent implements OnInit {
   ngOnInit() {
   }
 
- insertar() {
-    this.usuarioService.registroUsuario(this.usuario).then(resp  => {
-      console.log('holaa si entre a registrar desde el front');
-    // Toast.fire(usuario.msg, '', 'success');
-      // forma.reset();
+ insertar(form: NgForm) {
+    this.usuarioService.registroUsuario(this.usuario).then((resp: any)  => {
+      Toast.fire(resp.msg, 'Tus datos han sido guardados ', 'success');
+      form.reset();
       this.router.navigate(['/login'])
       this.salida.emit();
       
+      
     }).catch((err: any) => {
-      Toast.fire(err.error.msg, '', 'error');
+      Toast.fire(err.error.msg, 'llena todos los campos', 'error');
     });
   }
 }

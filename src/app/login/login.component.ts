@@ -27,15 +27,15 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-  registrar() {
-    this.usuarioService.loginUsuario(this.usuario).then(resp  => {
-      console.log('holaa si entre a registrar desde el front');
-    // Toast.fire(usuario.msg, '', 'success');
-      // forma.reset();
-      this.router.navigate(['/home'])
-      this.salida.emit();
+  registrar(forma: NgForm) {
+    this.usuarioService.loginUsuario(this.usuario).then((resp: any  ) => {
+     Toast.fire(resp.msg, 'Bievenido ', 'success');
+       forma.reset();
+       this.router.navigate(['/home'])
+       this.salida.emit();
+      
     }).catch((err: any) => {
-      Toast.fire(err.error.msg, '', 'error');
+      Toast.fire(err.error.msg, 'Tu correo o contraseña estan equivocados', 'error');
     });
   }
   
