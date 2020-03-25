@@ -34,6 +34,7 @@ import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usua
     RouterModule, //siempre se tiene que poner para cuando no jala los botones, tumbar y volver a cargar
     FormsModule,
     HttpClientModule,
+   
 
     
   ],
