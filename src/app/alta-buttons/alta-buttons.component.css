@@ -1,4 +1,4 @@
-.title {
+/* .title {
     position: relative;
     top: 80px;
     left: 12%;
@@ -114,4 +114,33 @@
 #botonUsuarios:hover span:after {
     opacity: 1;
     right: 0;
+} */
+
+.container {
+    position: relative;
+    top: 100px;
+    display: grid;
+    height: 500px;
+    align-content: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.container1 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.container2 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.container3 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px;
 }

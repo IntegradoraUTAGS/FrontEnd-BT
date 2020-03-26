@@ -1,51 +1,53 @@
 .jumbotron {
     position: relative;
-    height: 50px;
     width: 100%;
+    max-width: 1680px;
+    min-width: 500px;
+    overflow: hidden;
 }
 
 .logo {
     position: absolute;
     width: 7%;
-    top: 10px;
-    border-radius: 55%;
+    top: 5px;
+    border-radius: 45%;
     left: 5px;
 }
 
 .iconContact {
     position: absolute;
-    width: 2.5%;
-    top: 33px;
-    right: 37%;
+    width: 2%;
+    top: 25px;
+    right: 39%;
 }
 
 .iconPhone {
     position: absolute;
-    width: 2.5%;
-    top: 32px;
+    width: 2%;
+    top: 20px;
     right: 65%;
 }
 
 .tel {
     position: absolute;
-    width: 30%;
-    top: 32px;
-    right: 35%;
-    font-size: 2.2vw;
+    width: 35%;
+    top: 20px;
+    right: 30%;
+    font-size: 2vw;
 }
 
 .contacto {
     position: absolute;
-    width: 15%;
-    top: 32px;
-    right: 22%;
-    font-size: 2.2vw;
+    width: 10%;
+    top: 20px;
+    right: 28%;
+    font-size: 2vw;
 }
 
 #botonLogin {
     position: absolute;
     color: white;
-    top: 32px;
+    top: 20px;
     right: 3%;
     font-size: 1.3vw;
 }
@@ -59,7 +61,8 @@
     top: 2em;
 } */
 
-#mainNav {
+
+/* #mainNav {
     position: sticky;
     background-color: rgba(0, 0, 0, 0.5);
     animation-play-state: unset;
@@ -73,4 +76,4 @@
     color: white;
     font-size: 20px;
     font-family: unset;
-}
+} */
