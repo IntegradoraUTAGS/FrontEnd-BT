@@ -23,15 +23,15 @@
         <input type="text" name="dirigidoPersona" class="form-control" id="dirigidoPersona" [(ngModel)]="vacantes.dirigidoPersona" requiered />
 
         <label for="sueldo">Sueldo: </label>
-        <input type="number" name="sueldo" class="form-control" id="sueldo" [(ngModel)]="vacantes.sueldo" requiered />
-
+        
+        <input type="number" name="sueldo"  class="form-control" [(ngModel)]="vacantes.sueldo" maxlength="6"  min="1" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  required autocomplete="off" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1"/><i>(Máximo 6 dígitos)</i>
         <label for="idioma">Idiomas: </label>
         <input type="text" name="idiomas" class="form-control" id="idiomas" [(ngModel)]="vacantes.idioma" requiered />
 
         <label for="fechaLimite">Fecha Límite de la Vacante: </label>
         <input type="date" name="fechaLimite" class="form-control" id="fechaLimite" [(ngModel)]="vacantes.fechaLimite" requiered />
 
-        <button type="submit" class="btn btn-success"> Enviar. </button>
+        <button type="submit" class="btn btn-success">Enviar. </button>
     </form>
 
 </div>
