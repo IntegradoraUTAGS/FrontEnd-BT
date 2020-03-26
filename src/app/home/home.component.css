@@ -1,11 +1,12 @@
 .imagenPrincipal {
     position: relative;
     top: -32px;
-    height: 600px;
     width: 100%;
     max-width: 1680px;
-    height: 100%;
     min-width: 500px;
+    height: 100%;
+    max-height: 600px;
+    min-height: 200px;
 }
 
 .imagenOport {
