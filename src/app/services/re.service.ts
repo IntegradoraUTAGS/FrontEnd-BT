@@ -11,6 +11,6 @@ export class empresasService {
 
   constructor(private http: HttpClient) { }
   registrarEmpresa(empresas: reModel) {
-    return this.http.post(`${this.url}/empresa/reg`, empresas).toPromise();
+    return this.http.post(`${this.url}/empresa/registrar`, empresas).toPromise();
   }
 }

@@ -21,29 +21,24 @@
                 <hr>
                 <p id="error" style="color: red; display: none;"></p>
                 <form #myForm="ngForm" (ngSubmit)="rere(myForm)">
-                Nombre: <input name="nombre" id="nombre"  type="text" [(ngModel)]="reg.nombre" class="form-control" placeholder="Ingrese el nombre de la empresa" requiered><br>
-                Dirección: <input name="direccion" id="direccion"  type="text" [(ngModel)]="reg.direccion" class="form-control" placeholder="Por favor ingrese la dirección" requiered><br>                
-                Correo: <input name="email" id="email"  type="email" [(ngModel)]="reg.email" class="form-control" placeholder="Ingrese el correo" requiered><br> 
-                Teléfono: <input name="telefono" id="telefono"  type="text" [(ngModel)]="reg.telefono" class="form-control" placeholder="Ingrese el teléfono" requiered><br> 
-                RFC: <input name="rfc" id="rfc"  type="text" [(ngModel)]="reg.rfc" class="form-control" placeholder="Ingrese el RFC" requiered><br> 
-                Password: <input name="password" id="password"  type="password" [(ngModel)]="reg.password" class="form-control" placeholder="Ingrese la Contraseña" requiered><br> 
-                <!-- Confirmar Password: <input name="password" id="password"  type="password" class="form-control" placeholder="Ingrese nuevamente la Contraseña"><br> -->
-                Ubicación: <select name="ubicacion" [(ngModel)]="reg.ubicacion" class="form-control" id="ubicacion">
+                    Nombre: <input name="nombre" id="nombre" type="text" [(ngModel)]="reg.nombre" class="form-control" placeholder="Ingrese el nombre de la empresa"><br> Dirección: <input name="direccion" id="direccion" type="text" [(ngModel)]="reg.direccion"
+                        class="form-control" placeholder="Por favor ingrese la dirección"><br> Correo: <input name="email" id="email" type="email" [(ngModel)]="reg.email" class="form-control" placeholder="Ingrese el correo"><br> Teléfono: <input name="telefono"
+                        id="telefono" type="text" [(ngModel)]="reg.telefono" class="form-control" placeholder="Ingrese el teléfono"><br> RFC: <input name="rfc" id="rfc" type="text" [(ngModel)]="reg.rfc" class="form-control" placeholder="Ingrese el RFC"><br>                    Password: <input name="password" id="password" type="password" [(ngModel)]="reg.password" class="form-control" placeholder="Ingrese la Contraseña"><br>
+                    <!-- Confirmar Password: <input name="password" id="password"  type="password" class="form-control" placeholder="Ingrese nuevamente la Contraseña"><br> -->
+                    Ubicación: <select name="ubicacion" [(ngModel)]="reg.ubicacion" class="form-control" id="ubicacion">
                         <option value="Norte" selected>Norte</option> 
                         <option value="Sur">Sur</option>
                         <option value="Este">Este</option>
-                    </select><br>
-                Giro: <select name="giro" [(ngModel)]="reg.giro" class="form-control" id="giro">
+                    </select><br> Giro: <select name="giro" [(ngModel)]="reg.giro" class="form-control" id="giro">
                         <option value="Industrial" selected>Industrial</option> 
                         <option value="Servicios">Servicios</option>
-                    </select><br>
-                Tamaño: <select name="tamano" [(ngModel)]="reg.tamano" class="form-control" id="tamano">
+                    </select><br> Tamaño: <select name="tamano" [(ngModel)]="reg.tamano" class="form-control" id="tamano">
                         <option value="Mediana" selected>Mediana</option> 
                         <option value="Micro">Micro</option>
                         <option value="Grande">Grande</option>
                     </select><br>
                     <button type="submit" class="btn btn-success">Registrar</button>
-            </form>
+                </form>
             </div>
         </div>
     </div>
