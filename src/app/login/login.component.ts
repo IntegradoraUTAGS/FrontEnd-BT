@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     this.usuarioService.loginUsuario(this.usuario).then((resp: any  ) => {
      Toast.fire(resp.msg, 'Bievenido ', 'success');
        forma.reset();
-       this.router.navigate(['/home'])
+       this.router.navigate(['/altaButtons'])
        this.salida.emit();
       
     }).catch((err: any) => {
