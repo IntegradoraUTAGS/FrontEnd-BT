@@ -1,0 +1,109 @@
+<div class="container">
+    <h1>Encuesta de Satisfacción: </h1>
+    <form (ngSubmit)="registrar(myForm)" #myForm="ngForm">
+        <label for="email">Por favor, Inserte su Correo Electrónico: </label>
+        <input 
+            type="text"
+            name="email"
+            class="form-control"
+            id="email"
+            [(ngModel)]="satisfaccion.email"
+            requiered
+        />
+
+        <label for="nomEmpresa">Inserte el Nombre de la Empresa: </label>
+        <input 
+            type="text"
+            name="nomEmpresa"
+            class="form-control"
+            id="nomEmpresa"
+            [(ngModel)]="satisfaccion.nomEmpresa"
+            requiered
+        />
+
+        <label for="organizacion">Inserte el Tipo de Organización: </label>
+        <select class="form-control" name="organizacion" id="organizacion" [(ngModel)]="satisfaccion.organizacion" requiered>
+            <option value="publica">Pública.</option>
+            <option value="privada">Privada.</option>			      
+        </select>
+
+        <label for="tamañoOrg">¿Cuál es el tamaño de la organización?: </label>
+        <select class="form-control" name="tamañoOrg" id="tamañoOrg" [(ngModel)]="satisfaccion.tamañoOrg" requiered>
+            <option value="micro">Micro (1 a 10 empleados).</option>
+            <option value="mediana">Mediana (21 a 50 empleados).</option>	
+            <option value="grande">Grande (Más de 51 empleados).</option>			      
+        </select>
+
+        <label for="ubicacionEmpleo">Inserte la ubicacion de la Empresa: </label>
+        <input 
+            type="text"
+            name="ubicacionEmpleo"
+            class="form-control"
+            id="ubicacionEmpleo"
+            [(ngModel)]="satisfaccion.ubicacionEmpleo"
+            requiered
+        />
+
+        <label for="carrera">Perfil de los Programas Educativos de la Universidad Tecnológica  que ha solicitado: </label>
+        <input 
+            type="text"
+            name="carrera"
+            class="form-control"
+            id="carrera"
+            [(ngModel)]="satisfaccion.carrera"
+            requiered
+        />
+
+        <label for="nombreAlum">Nombre del Egresado/Alumno contratado: </label>
+        <input 
+            type="text"
+            name="nombreAlum"
+            class="form-control"
+            id="nombreAlum"
+            [(ngModel)]="satisfaccion.nombreAlum"
+            requiered
+        />
+
+        <label for="perfilContrato">Perfil de Contrato: </label>
+        <input 
+            type="text"
+            name="perfilContrato"
+            class="form-control"
+            id="perfilContrato"
+            [(ngModel)]="satisfaccion.perfilContrato"
+            requiered
+        />
+
+        <label for="sueldo">Sueldo mensual aproximado ofrecido por la organización a la que representa: </label>
+        <select class="form-control" name="sueldo" id="sueldo" [(ngModel)]="satisfaccion.sueldo" requiered>
+            <option value="menos4500">Menos de $4,500 al mes.</option>
+            <option value="de4500a6500">$4,500 - $6,500 al mes.</option>	
+            <option value="de6500a8500">$6,500 - $8,500 al mes.</option>	
+            <option value="de8500a10500">$8,500 - $10,500 al mes.</option>		
+            <option value="mas10500">Mas de $10,500 al mes.</option>		      
+        </select>
+
+        <label for="conocimientos">¿El conocimiento y habilidad por parte del egresado de la Universidad Tecnológica en el manejo del equipo, maquinaria y herramientas de trabajo para desempeñar sus actividades lo considera?: </label>
+        <select class="form-control" name="conocimientos" id="conocimientos" [(ngModel)]="satisfaccion.conocimientos" requiered>
+            <option value="nada">Nada satisfecho.</option>
+            <option value="poco">Poco satisfecho.</option>	
+            <option value="satisfecho">Satisfecho.</option>	
+            <option value="muy">Muy Satisfecho.</option>			      
+        </select>
+
+        <label for="creatividad">La creatividad e innovación para proponer mejoras a los procesos de la empresa por parte del  egresado, los considera:             : </label>
+        <select class="form-control" name="creatividad" id="creatividad" [(ngModel)]="satisfaccion.creatividad" requiered>
+            <option value="nada">Nada satisfecho.</option>
+            <option value="poco">Poco satisfecho.</option>	
+            <option value="satisfecho">Satisfecho.</option>	
+            <option value="muy">Muy Satisfecho.</option>			      
+        </select>
+        
+        <button type="submit" class="btn btn-success"> Enviar. </button>
+    </form>
+    <div class="pre">
+        <h2>Modelo: </h2>
+        {{currentVacantes}}
+    </div>
+</div>
+
