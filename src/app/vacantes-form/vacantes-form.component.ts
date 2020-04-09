@@ -20,6 +20,20 @@ export class VacantesFormComponent implements OnInit {
   
     @Output() salida = new EventEmitter();
     vacantes: vacantesModelo = new vacantesModelo();
+	
+	DownloadPDF() {
+      const doc = new jsPDF();
+      // tslint:disable-next-line:only-arrow-functions
+
+      doc.text('Perfil: ' + this.vacantes.perfil , 40, 10);
+      doc.text('requiere: ' + this.vacantes.requiere , 40, 20);
+      doc.text('prestaciones:  ' + this.vacantes.prestaciones , 40, 30);
+      doc.text('dirigidoA: ' + this.vacantes.dirigidoA  , 40, 40);
+      doc.text('dirigidopersona: ' + this.vacantes.dirigidoPersona , 40, 50);
+      doc.text('Idioma: ' + this.vacantes.idioma , 40, 60);
+      doc.text('Fecha Limite: ' + this.vacantes.fechaLimite , 40, 70);
+      doc.save('vacante.pdf');
+    }
 
   constructor(private vacantesService: vacantesService) { }
   ngOnInit(): void {
