@@ -13,7 +13,7 @@ import { AltaButtonsComponent } from './alta-buttons/alta-buttons.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
-
+import { StudentsComponent } from './students/students.component';
 
 
 @NgModule({
@@ -25,8 +25,8 @@ import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usua
     REComponent,
     AltaButtonsComponent,
     VacantesFormComponent, 
-    FormularioUsuarioComponent
-
+    FormularioUsuarioComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,
