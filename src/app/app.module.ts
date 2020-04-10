@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
 import { StudentsComponent } from './students/students.component';
+import {FormSatisfaccionComponent} from './form-satisfaccion/form-satisfaccion.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { StudentsComponent } from './students/students.component';
     AltaButtonsComponent,
     VacantesFormComponent, 
     FormularioUsuarioComponent,
-    StudentsComponent
+    StudentsComponent,
+    FormSatisfaccionComponent
   ],
   imports: [
     BrowserModule,
