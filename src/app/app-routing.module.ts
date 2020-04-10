@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { VacantesFormComponent } from './vacantes-form/vacantes-form.component';
 import { REComponent } from './re/re.component';
 import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
+import { FormSatisfaccionComponent } from './form-satisfaccion/form-satisfaccion.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path: 'RegEmp', component:REComponent},
   {path: 'vacantesForm', component:VacantesFormComponent},
-  {path: 'usuario', component: FormularioUsuarioComponent}
+  {path: 'usuario', component: FormularioUsuarioComponent},
+  {path: 'FormSatisfaccion', component: FormSatisfaccionComponent}
 ];
 
 @NgModule({
