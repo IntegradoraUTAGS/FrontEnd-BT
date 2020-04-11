@@ -3,6 +3,7 @@ import { vacantesModelo } from '../models/vacantes.models';
 import { NgForm } from '@angular/forms';
 import { vacantesService } from 'src/app/services/vacante.service';
 import Swal from 'sweetalert2';
+import * as jsPDF from 'jspdf';
 
 const Toast = Swal.mixin({
   toast: true,
