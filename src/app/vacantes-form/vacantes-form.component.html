@@ -45,7 +45,8 @@
         </div>
 
         <label for="sueldo">Sueldo: </label><i>(Máximo 6 dígitos)</i>
-        <input type="number" name="sueldo"  class="form-control" [(ngModel)]="vacantes.sueldo" maxlength="6"  min="1" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  required autocomplete="off" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1"/>
+        <input type="number" name="sueldo" class="form-control" [(ngModel)]="vacantes.sueldo" maxlength="6" min="1" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required autocomplete="off" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+            min="1" />
         <div class="invalid-feedback">
             Por favor, ponga el sueldo.
         </div>
@@ -62,7 +63,7 @@
             Introduzca la fecha límite de la vacante.
         </div>
 
-        <button type="submit" class="btn btn-success">Enviar. </button>
+        <button type="submit" class="btn btn-success" (click)="DownloadPDF()">Enviar. </button>
         <a routerLink='/altaButtons'>
             <button id="myButton" class="btn-success">Regresar.</button>
         </a>
@@ -72,20 +73,19 @@
 </div>
 
 <script>
-
     (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-        var forms = document.getElementsByClassName('needs-validation');
-        var validation = Array.prototype.filter.call(forms, function(form) {
-          form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
+        'use strict';
+        window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
     })();
-    </script>
+</script>
