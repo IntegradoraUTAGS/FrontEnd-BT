@@ -1,3 +1,4 @@
+import { EvaluacionComponent } from './evaluacion/evaluacion.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from '../app/home/home.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'RegEmp', component:REComponent},
   {path: 'vacantesForm', component:VacantesFormComponent},
   {path: 'usuario', component: FormularioUsuarioComponent},
-  {path: 'FormSatisfaccion', component: FormSatisfaccionComponent}
+  {path: 'FormSatisfaccion', component: FormSatisfaccionComponent},
+  {path: 'Evaluacion', component: EvaluacionComponent}
 ];
 
 @NgModule({
