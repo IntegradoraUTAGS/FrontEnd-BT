@@ -46,3 +46,11 @@
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.invalid-feedback {
+    border: 2px dashed red;
+}
+
+input:valid {
+    border: 2px solid black;
+}
