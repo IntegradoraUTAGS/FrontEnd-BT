@@ -1,0 +1,29 @@
+#buttonSend {
+    position: absolute;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#regresar {
+    position: absolute;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    left: 12vw;
+}
+
+.labels {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
