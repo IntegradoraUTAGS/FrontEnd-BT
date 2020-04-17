@@ -16,28 +16,94 @@
 <body>
     <div class="container-fluid">
         <div class="row h-100 d-flex justify-content-center">
-            <div class="col-md-6 mt-5">
+            <div class="col-md-6 mt-6">
                 <legend>Registra Tu Empresa</legend>
                 <hr>
                 <p id="error" style="color: red; display: none;"></p>
-                <form #myForm="ngForm" (ngSubmit)="rere(myForm)">
-                    Nombre: <input name="nombre" id="nombre" type="text" [(ngModel)]="reg.nombre" class="form-control" placeholder="Ingrese el nombre de la empresa"><br> Dirección: <input name="direccion" id="direccion" type="text" [(ngModel)]="reg.direccion"
-                        class="form-control" placeholder="Por favor ingrese la dirección"><br> Correo: <input name="email" id="email" type="email" [(ngModel)]="reg.email" class="form-control" placeholder="Ingrese el correo"><br> Teléfono: <input name="telefono"
-                        id="telefono" type="text" [(ngModel)]="reg.telefono" class="form-control" placeholder="Ingrese el teléfono"><br> RFC: <input name="rfc" id="rfc" type="text" [(ngModel)]="reg.rfc" class="form-control" placeholder="Ingrese el RFC"><br>                    Password: <input name="password" id="password" type="password" [(ngModel)]="reg.password" class="form-control" placeholder="Ingrese la Contraseña"><br>
+                <form (ngSubmit)="reEmpresa(myForm)" #myForm="ngForm" class="was-validated">
+                    <div class="form-group">
+                        <div class="col-md-12 mb-3">
+                            <label for="nombre" class="labels">  Nombre: </label>
+                            <input type="text" name="nombre" class="form-control" id="nombre" [(ngModel)]="re.nombre" pattern="[A-Za-z]+" minlength="5" maxlength="80" required />
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">solo acepta letras</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 mb-3">
+                            <label for="direccion" class="labels">  Dirección: </label>
+                            <input type="text" name="direccion" class="form-control" id="direccion" [(ngModel)]="re.direccion" required />
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">Introduzca la dirección</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 mb-3">
+                            <label for="email" class="labels">  Correo Electrónico: </label>
+                            <input type="email" name="email" class="form-control" id="email" [(ngModel)]="re.email" minlength="10" maxlength="80" required />
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">Introduzca correo electronico valido</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 mb-3">
+                            <label for="telefono" class="labels">  Telefono: </label>
+                            <input type="tel" name="telefono" class="form-control" id="telefono" [(ngModel)]="re.telefono" required pattern="[0-9]{9}" />
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">Introduzca telefono</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 mb-3">
+                            <label for="rfc" class="labels">  RFC: </label>
+                            <input type="text" name="rfc" class="form-control" id="rfc" [(ngModel)]="re.rfc" required />
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">Introduzca el RFC</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 mb-3">
+                            <label for="password" class="labels"> Contraseña: </label>
+                            <input type="password" name="password" class="form-control" id="password" [(ngModel)]="re.password" required />
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">Introduzca la contraseña</div>
+                        </div>
+                    </div>
                     <!-- Confirmar Password: <input name="password" id="password"  type="password" class="form-control" placeholder="Ingrese nuevamente la Contraseña"><br> -->
-                    Ubicación: <select name="ubicacion" [(ngModel)]="reg.ubicacion" class="form-control" id="ubicacion">
-                        <option value="Norte" selected>Norte</option> 
+                    <div class="form-group">
+                        <div class="col-md-12 mb-3">
+                            <label for="ubicacion" class="labels">Ubicación: </label>
+                            <select class="form-control" name="ubicacion" id="ubicacion" [(ngModel)]="re.ubicacion" required>
+                        <option value="Norte">Norte</option>
                         <option value="Sur">Sur</option>
-                        <option value="Este">Este</option>
-                    </select><br> Giro: <select name="giro" [(ngModel)]="reg.giro" class="form-control" id="giro">
-                        <option value="Industrial" selected>Industrial</option> 
+                        <option value="Este">Este</option>			      
+                    </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 mb-3">
+                            <label for="giro" class="labels">Giro: </label>
+                            <select class="form-control" name="giro" id="giro" [(ngModel)]="re.giro" required>
+                        <option value="Industrial">Industrial</option>
                         <option value="Servicios">Servicios</option>
-                    </select><br> Tamaño: <select name="tamano" [(ngModel)]="reg.tamano" class="form-control" id="tamano">
-                        <option value="Mediana" selected>Mediana</option> 
+                        <!-- <option value="Este">Este</option>			       -->
+                    </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 mb-3">
+                            <label for="tamano" class="labels">Tamaño: </label>
+                            <select class="form-control" name="tamano" id="tamano" [(ngModel)]="re.tamano" required>
                         <option value="Micro">Micro</option>
-                        <option value="Grande">Grande</option>
-                    </select><br>
-                    <button type="submit" class="btn btn-success">Registrar</button>
+                        <option value="Mediana">Mediana</option>
+                        <option value="Grande">Grande</option>			      
+                    </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success" id="buttonSend">Registrar</button>
+                    <a routerLink='/altaButtons'>
+                        <button id="myButton" class="btn btn-success" id="regresar">Regresar</button>
+                    </a>
                 </form>
             </div>
         </div>

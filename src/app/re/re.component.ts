@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { reModel } from '../models/re.models';
 import { NgForm } from '@angular/forms';
-import { empresasService } from 'src/app/services/re.service';
+import { reService } from 'src/app/services/re.service';
 import Swal from 'sweetalert2';
 
 const Toast = Swal.mixin({
@@ -12,22 +12,22 @@ const Toast = Swal.mixin({
  });
 
 @Component({
-  selector: 'app-re',
+  selector: 're',
   templateUrl: './re.component.html',
   styleUrls: ['./re.component.css']
 })
 export class REComponent implements OnInit {
   @Output() salida = new EventEmitter();
-  reg: reModel = new reModel();
+re: reModel = new reModel();
 
-constructor(private empresasService: empresasService) { }
+constructor(private reService: reService) { }
 ngOnInit(): void {
 }
-get currentVacantes(){
-  return JSON.stringify(this.reg);
+get currentRe(){
+  return JSON.stringify(this.re);
 }
-rere(forma: NgForm) {
-  this.empresasService.registrarEmpresa(this.reg).then((re: any) => {
+reEmpresa(forma: NgForm) {
+  this.reService.re(this.re).then((re: any) => {
     Toast.fire(re.msg, '', 'success');
     forma.reset();
     this.salida.emit();

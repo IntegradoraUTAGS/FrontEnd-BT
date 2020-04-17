@@ -5,12 +5,12 @@ import { reModel } from '../models/re.models';
 @Injectable({
   providedIn: 'root'
 })
-export class empresasService {
+export class reService {
 
   url = `http://localhost:3000`;
 
   constructor(private http: HttpClient) { }
-  registrarEmpresa(empresas: reModel) {
-    return this.http.post(`${this.url}/empresa/registrar`, empresas).toPromise();
+  re(re: reModel) {
+    return this.http.post(`${this.url}/registrarEmpresa/empresa/registrar`, re).toPromise();
   }
 }

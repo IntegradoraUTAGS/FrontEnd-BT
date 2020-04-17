@@ -1,91 +1,109 @@
 <div class="container">
     <h1>Vacantes: </h1>
-    <form (ngSubmit)="registrar(myForm)" #myForm="ngForm">
-        <label for="perfil">Perfil: </label>
-        <input type="text" name="perfil" class="form-control" id="perfil" [(ngModel)]="vacantes.perfil" requiered />
-        <div class="invalid-feedback">
-            Introduzca el perfil.
+    <form (ngSubmit)="registrar(myForm)" #myForm="ngForm" class="was-validated">
+        <div class="form-group">
+            <div class="col-md-12 mb-3">
+                <label for="perfil" class="labels">Perfil: </label>
+                <input type="text" name="perfil" class="form-control" id="perfil" [(ngModel)]="vacantes.perfil" pattern="[A-Za-z]+" minlength="5" maxlength="80" required />
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Introduzca el perfil</div>
+            </div>
         </div>
-
-        <label for="requiere">Requiere: </label>
-        <input type="text" name="requiere" class="form-control" id="requiere" [(ngModel)]="vacantes.requiere" requiered />
-        <div class="invalid-feedback">
-            Introduzca lo que requiere.
+        <div class="form-group">
+            <div class="col-md-12 mb-3">
+                <label for="requiere" class="labels">Requiere: </label>
+                <input type="text" name="requiere" class="form-control" id="requiere" [(ngModel)]="vacantes.requiere" pattern="[A-Za-z]+" minlength="5" maxlength="80" required />
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Introduzca que solicita.</div>
+            </div>
         </div>
-
-        <label for="horario">Horario: </label>
-        <input type="TimeRanges" name="horario" class="form-control" id="horario" [(ngModel)]="vacantes.horario" requiered />
-        <div class="invalid-feedback">
-            Introduzca el horario.
+        <div class="form-group">
+            <div class="col-md-12 mb-3">
+                <label for="horario" class="labels">Horario: </label>
+                <input type="text" name="horario" class="form-control" id="horario" [(ngModel)]="vacantes.horario" required />
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Introduzca el horario.</div>
+            </div>
         </div>
-
-        <label for="prestaciones">Prestaciones: </label>
-        <select class="form-control" name="prestaciones" id="prestaciones" [(ngModel)]="vacantes.prestaciones" requiered>
+        <div class="form-group">
+            <div class="col-md-12 mb-3">
+                <label for="prestaciones" class="labels">Prestaciones: </label>
+                <select class="form-control" name="prestaciones" id="prestaciones" [(ngModel)]="vacantes.prestaciones" required>
             <option value="deLey">De Ley.</option>
             <option value="superioresDeLey">Superiores de Ley.</option>		
             <option value="honorarios">Honorarios.</option>	      
         </select>
-        <div class="invalid-feedback">
-            Seleccione las prestaciones.
+            </div>
         </div>
-
-        <label for="dirigidoA">Dirigido A: </label>
-        <select class="form-control" name="dirigidoA" id="dirigidoA" [(ngModel)]="vacantes.dirigidoA" requiered>
+        <div class="form-group">
+            <div class="col-md-12 mb-3">
+                <label for="dirigidoA" class="labels">Dirigido A: </label>
+                <select class="form-control" name="dirigidoA" id="dirigidoA" [(ngModel)]="vacantes.dirigidoA" required>
             <option value="estadias">Estadías.</option>
             <option value="egresados">Egresados.</option>			      
         </select>
-        <div class="invalid-feedback">
-            Seleccione a quién va dirigida la vacante.
+            </div>
         </div>
-
-        <label for="dirigidoPersona">Persona a quien dirigirse: </label>
-        <input type="text" name="dirigidoPersona" class="form-control" id="dirigidoPersona" [(ngModel)]="vacantes.dirigidoPersona" requiered />
-        <div class="invalid-feedback">
-            Por favor, ponga el nombre de la persona a quien debe dirigirse el solicitante.
+        <div class="form-group">
+            <div class="col-md-12 mb-3">
+                <label for="dirigidoPersona" class="labels">Persona a quien dirigirse: </label>
+                <input type="text" name="dirigidoPersona" class="form-control" id="dirigidoPersona" [(ngModel)]="vacantes.dirigidoPersona" required />
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Introduzca a la persona a dirigirse.</div>
+            </div>
         </div>
-
-        <label for="sueldo">Sueldo: </label><i>(Máximo 6 dígitos)</i>
-        <input type="number" name="sueldo" class="form-control" [(ngModel)]="vacantes.sueldo" maxlength="6" min="1" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required autocomplete="off" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
-            min="1" />
-        <div class="invalid-feedback">
-            Por favor, ponga el sueldo.
+        <div class="form-group">
+            <div class="col-md-12 mb-3">
+                <label for="sueldo" class="labels">Sueldo: </label><i>(Máximo 6 dígitos)</i>
+                <input type="number" name="sueldo" class="form-control" [(ngModel)]="vacantes.sueldo" maxlength="6" min="1" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required autocomplete="off" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+                    min="1" />
+                <div class="invalid-feedback">
+                    Ingrese el sueldo.
+                </div>
+            </div>
         </div>
-
-        <label for="idioma">Idiomas: </label>
-        <input type="text" name="idiomas" class="form-control" id="idiomas" [(ngModel)]="vacantes.idioma" requiered />
-        <div class="invalid-feedback">
-            Por favor, introduzca los idiomas.
+        <div class="form-group">
+            <div class="col-md-12 mb-3">
+                <label for="idioma" class="labels">Idiomas: </label>
+                <input type="text" name="idiomas" class="form-control" id="idiomas" [(ngModel)]="vacantes.idioma" required />
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Introduzca los idiomas</div>
+            </div>
         </div>
+        <div class="form-group">
+            <div class="col-md-12 mb-3">
+                <label for="fechaLimite" class="labels">Fecha Límite de la Vacante: </label>
+                <input type="date" name="fechaLimite" class="form-control" id="fechaLimite" [(ngModel)]="vacantes.fechaLimite" required />
+                <div class="invalid-feedback">
+                    Introduzca la fecha límite de la vacante.
+                </div>
+            </div>
+            <br>
 
-        <label for="fechaLimite">Fecha Límite de la Vacante: </label>
-        <input type="date" name="fechaLimite" class="form-control" id="fechaLimite" [(ngModel)]="vacantes.fechaLimite" requiered />
-        <div class="invalid-feedback">
-            Introduzca la fecha límite de la vacante.
-        </div>
+            <button type="submit" class="btn btn-success" (click)="DownloadPDF()" id="buttonSend">Enviar. </button>
+            <a routerLink='/altaButtons'>
+                <button id="myButton" class="btn btn-success" id="regresar">Regresar.</button>
+            </a>
 
-        <button type="submit" class="btn btn-success" (click)="DownloadPDF()">Enviar. </button>
-        <a routerLink='/altaButtons'>
-            <button id="myButton" class="btn-success">Regresar.</button>
-        </a>
 
     </form>
 
-</div>
+    </div>
 
-<script>
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            var forms = document.getElementsByClassName('needs-validation');
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-</script>
+    <script>
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
