@@ -11,11 +11,15 @@ import { REComponent } from './re/re.component';
 import { RouterModule } from '@angular/router';
 import { AltaButtonsComponent } from './alta-buttons/alta-buttons.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
 import { StudentsComponent } from './students/students.component';
 import {FormSatisfaccionComponent} from './form-satisfaccion/form-satisfaccion.component';
 import { EvaluacionComponent } from './evaluacion/evaluacion.component';
+
+import { EvaluacionService } from './services/evaluacion.service';
+import { EliminarUsuarioComponent } from './eliminar-usuario/eliminar-usuario.component';
+import { EliminarEvaluacionComponent } from './eliminar-evaluacion/eliminar-evaluacion.component';
 
 
 @NgModule({
@@ -30,7 +34,9 @@ import { EvaluacionComponent } from './evaluacion/evaluacion.component';
     FormularioUsuarioComponent,
     StudentsComponent,
     FormSatisfaccionComponent,
-    EvaluacionComponent
+    EvaluacionComponent,
+    EliminarUsuarioComponent,
+    EliminarEvaluacionComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,7 @@ import { EvaluacionComponent } from './evaluacion/evaluacion.component';
 
     
   ],
-  providers: [],
+  providers: [EvaluacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

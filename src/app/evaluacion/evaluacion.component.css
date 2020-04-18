@@ -1,0 +1,11 @@
+.header {
+    text-align: center;
+}
+
+.content {
+    margin: 100px;
+}
+
+.upload {
+    cursor: pointer;
+}

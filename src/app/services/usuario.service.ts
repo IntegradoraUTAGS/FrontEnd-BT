@@ -4,6 +4,7 @@ import { UsuarioModel } from '../models/usuario';
 import { RegistrarModel } from '../models/registrar';
 
 
+
 @Injectable({
     providedIn: 'root'
   })
@@ -18,6 +19,10 @@ import { RegistrarModel } from '../models/registrar';
 
  registroUsuario(usuario: RegistrarModel) {
    return this.http.post(`${this.url}/agregar`, usuario).toPromise();
+}
+
+eliminarusuario(usuario: RegistrarModel) {
+   return this.http.delete(`${this.url}/usuario/${nombre}`).toPromise();
 }
  
  }

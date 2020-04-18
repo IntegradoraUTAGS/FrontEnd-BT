@@ -8,6 +8,9 @@ import { VacantesFormComponent } from './vacantes-form/vacantes-form.component';
 import { REComponent } from './re/re.component';
 import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
 import { FormSatisfaccionComponent } from './form-satisfaccion/form-satisfaccion.component';
+import { EliminarUsuarioComponent } from './eliminar-usuario/eliminar-usuario.component';
+import { EliminarEvaluacionComponent } from './eliminar-evaluacion/eliminar-evaluacion.component';
+
 
 
 const routes: Routes = [
@@ -19,7 +22,10 @@ const routes: Routes = [
   {path: 'vacantesForm', component:VacantesFormComponent},
   {path: 'usuario', component: FormularioUsuarioComponent},
   {path: 'FormSatisfaccion', component: FormSatisfaccionComponent},
-  {path: 'Evaluacion', component: EvaluacionComponent}
+  {path: 'Evaluacion', component: EvaluacionComponent},
+  {path: 'eliminar-usuario', component: EliminarUsuarioComponent},
+  {path: 'eliminar-evaluacion', component: EliminarEvaluacionComponent}
+
 ];
 
 @NgModule({

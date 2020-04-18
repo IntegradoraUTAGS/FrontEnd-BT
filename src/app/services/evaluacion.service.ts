@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {evaluacionModel} from '../models/evaluacion.models';
+import { evaluacionModel } from '../models/evaluacion.models';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +12,13 @@ export class EvaluacionService {
   registrarEvaluacion(evaluacion: evaluacionModel){
     return this.http.post(`${this.url}/evaluacion/registrar`,evaluacion ).toPromise();
   }
+  uploadFile(formData) {
+   
+    return this.http.post(`${this.url}/api/subir`,formData );
+  }
+  eliminareval(evaluacion: evaluacionModel) {
+    return this.http.post(`${this.url}/eliminar`, evaluacion).toPromise();
+ }
+
   
 }
