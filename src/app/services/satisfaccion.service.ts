@@ -7,7 +7,7 @@ import { satisfaccionModelo } from '../models/satisfaccion.models';
   })
   export class satisfaccionService {
   
-    url = `http://localhost:3000`;
+    url = `http://172.17.1.7:8099`;
   
     constructor(private http: HttpClient) { }
   
