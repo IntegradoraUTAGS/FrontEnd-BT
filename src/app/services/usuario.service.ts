@@ -9,7 +9,7 @@ import { RegistrarModel } from '../models/registrar';
   })
 
   export class UsuarioService {
- url = `http://172.17.1.7:8099/usuario`;
+ url = `http://localhost:3000/usuario`;
  constructor(private http: HttpClient) { }
 
  loginUsuario(usuario: UsuarioModel) {

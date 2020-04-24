@@ -6,7 +6,7 @@ import {evaluacionModel} from '../models/evaluacion.models';
   providedIn: 'root'
 })
 export class EvaluacionService {
-  url = `http://172.17.1.7:8099`;
+  url = `http://localhost:3000`;
 
   constructor(private http: HttpClient) { }
   registrarEvaluacion(evaluacion: evaluacionModel){

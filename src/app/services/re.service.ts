@@ -7,7 +7,7 @@ import { reModel } from '../models/re.models';
 })
 export class reService {
 
-  url = `http://172.17.1.7:8099`;
+  url = `http://localhost:3000`;
 
   constructor(private http: HttpClient) { }
   re(re: reModel) {
