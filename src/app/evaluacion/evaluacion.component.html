@@ -12,24 +12,14 @@
                         <option value="poco">No</option>			      
                     </select>
 
-                <div class="col-md-4">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span id="btnsubir" class="input-group-text upload" (click)="onUpload()">
-                                    subir
-                                </span>
-                        </div>
-                        <div class="custom-file">
-                            <form action="/api/upload" method="post" enctype="multipart/form-data">
-                                <input type="file" class="custom-file-input" id="input-custom-file" (change)="onfileChange($event)">
-                                <label class="custom-file-label" for="input-custom-file">Choose file</label>
-                            </form>
 
-                        </div>
-                    </div>
+                <br>
+                <div class="custom-file">
+                    <input name="cv" id="cv" type="file" [(ngModel)]="evaluacion.cv" class="form-control" placeholder="En vez de label tiene que ser un uloapd file" required>
                 </div>
-                <!-- <br> CV aqui subes el archivo ivan <input name="cv" id="cv" type="text" [(ngModel)]="evaluacion.cv" class="form-control" placeholder="En vez de label tiene que ser un uloapd file"> -->
-                <!-- <br> -->
+                <hr>
+
+
                 <button type="submit" class="btn btn-success">Registrar</button>
                 <a routerLink='/altaButtons'>
                     <button id="myButton" class="btn btn-success">Regresar.</button>

@@ -23,29 +23,29 @@ export class EliminarUsuarioComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  eliminar(form: NgForm ){
-    Swal.fire({
-      title: `¿Estás seguro qué deseas eliminarlo?`,
-      text: 'No se pueden revertir los cambios',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Sí.',
-      cancelButtonText: 'No'
-    }).then((result) => {
-      if (result.value) {
-    this.usuarioService.eliminarusuario(this.usuario).then((resp: any)  => {
-      Toast.fire(resp.msg, 'Tus datos han sido guardados ', 'success');
-      form.reset();
-      this.router.navigate(['/home'])
-      this.salida.emit();
+  // eliminar(form: NgForm ){
+  //   Swal.fire({
+  //     title: `¿Estás seguro qué deseas eliminarlo?`,
+  //     text: 'No se pueden revertir los cambios',
+  //     icon: 'warning',
+  //     showCancelButton: true,
+  //     confirmButtonColor: '#3085d6',
+  //     cancelButtonColor: '#d33',
+  //     confirmButtonText: 'Sí.',
+  //     cancelButtonText: 'No'
+  //   }).then((result) => {
+  //     if (result.value) {
+  //   this.usuarioService.eliminarusuario(this.usuario).then((resp: any)  => {
+  //     Toast.fire(resp.msg, 'Tus datos han sido guardados ', 'success');
+  //     form.reset();
+  //     this.router.navigate(['/home'])
+  //     this.salida.emit();
       
       
-    }).catch((err: any) => {
-      Toast.fire(err.error.msg, 'llena todos los campos', 'error');
-    });
-  }
-  });
-}
+  //   }).catch((err: any) => {
+  //     Toast.fire(err.error.msg, 'llena todos los campos', 'error');
+  //   });
+  // }
+  // });
+// }
 }

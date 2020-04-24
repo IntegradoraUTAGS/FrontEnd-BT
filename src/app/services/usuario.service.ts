@@ -21,9 +21,7 @@ import { RegistrarModel } from '../models/registrar';
    return this.http.post(`${this.url}/agregar`, usuario).toPromise();
 }
 
-eliminarusuario(usuario: RegistrarModel) {
-   return this.http.delete(`${this.url}/usuario/${nombre}`).toPromise();
-}
+
  
  }
   
