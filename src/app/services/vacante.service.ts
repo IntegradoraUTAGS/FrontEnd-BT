@@ -7,7 +7,7 @@ import { vacantesModelo } from '../models/vacantes.models';
 })
 export class vacantesService {
 
-  url = `http://localhost:3000`;
+  url = `http://172.17.1.7:6399`;
 
   constructor(private http: HttpClient) { }
 
